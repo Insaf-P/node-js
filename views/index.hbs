@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+{{#each values}}
+
+	<h1>{{@index}}.{{this}}</h1>
+
+{{/each}}
+
+{{!-- <h2>{{person.comment.comments.date}}</h2> --}}
+
+{{#with person}}
+	<h2>{{comment.comments}}</h2>
+	<h1>{{comment.date}}</h1>
+{{/with}}
+
+{{#if user.admin}}
+
+	<h1>This is admin</h1>
+
+{{else}}
+
+	<h1>This is not admin page</h1>
+
+{{/if}}
+
+<h3>{{date.times}}</h3>
